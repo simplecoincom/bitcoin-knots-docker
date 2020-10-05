@@ -1,0 +1,19 @@
+- name: Anchore Container Scan
+  # You may pin to the exact commit or the version.
+  # uses: anchore/scan-action@c2212d957317364df2ecb3011b8a1c6335fd0e52
+  uses: anchore/scan-action@v2.0.0
+  with:
+    # The image to scan. This option is mutually exclusive with "path". 
+    image: # optional
+    # The path to scan. This option is mutually exclusive with "image".
+    path: # optional
+    # Set this to any value to enable verbose debug output
+    debug: # optional, default is false
+    # Set to any value to cause build to fail upon failed anchore policy evaluation
+    fail-build: # optional, default is false
+    # Optionally, specify the Grype version (e.g. 0.1.0) to use instead of the default version
+    grype-version: # optional
+    # Optionally, enable feature that causes a result.sarif report to be generated after successful action execution.  This report is compatible with GitHub Automated Code Scanning (ACS), as the artifact to upload for display as a Code Scanning Alert report.
+    acs-report-enable: # optional, default is false
+    # Optionally specify the minimum vulnerability severity to trigger an "error" level ACS result.  Valid choices are "negligible", "low", "medium", "high" and "critical".  Any vulnerability with a severity less than this value will lead to a "warning" result.  Default is "medium".
+    severity-cutoff: # optional, default is medium
