@@ -4,3 +4,5 @@
 ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/simplecoin/bitcoin-knots?label=Docker)
 
 This Docker image provides and implementation of bitcoin knots.
+
+Image Vulnerability scans are done on DockerHub provided by Snyk.
